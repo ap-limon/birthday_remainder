@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Noto+Serif&family=Poppins&display=swap');
+
+/* variable has been declared here */
+:root {
+  --pink-color: #F28AB2;
+  --white-color: #FFFFFF;
+  --ligt-white-color: #F5F5F5;
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, .45);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, .25);
+}
+
+/* the initial style is here */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  background-color: var(--pink-color);
+}
+h2, h4 {
+  font-family: 'Fuzzy Bubbles', cursive;
+}
+h2 {
+  padding-top: 10px;
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: .15em;
+  word-spacing: .15em;
+}
+
+/* the list container's style is here */
+.container {
+  width: 600px;
+  margin: 5rem auto;
+  height: auto;
+  background-color: var(--white-color);
+  box-shadow: var(--dark-shadow);
+  text-align: center;
+}
+
+/* the person style starts from here */
+.person {
+  margin: 10px 0;
+  background-color: var(--ligt-white-color);
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+/* the image style is here */
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--light-shadow);
+}
+.image {
+  padding: 5px;
+}
+
+/* here is the description style */
+.desc {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+.detail {
+  text-align: left;
+}
+.detail p {
+  line-height: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* here goes the button style */
+button {
+  font-family: 'Noto Serif', serif;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 2px;
+}
+button:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+/* footer style goes here */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: var(--white-color);
+  width: 70%;
+  font-size: .9rem;
+  padding: 5px;
+  text-align: center;
+}
+
+/* this is responsivenes when screen width is less than 668px */
+@media only screen and (max-width: 668px) {
+  .container {
+    width: 80vw;
+  }
+  img{
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* this is the style for screen less then 485px */
+@media only screen and (max-width: 485px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: .85rem;
+  }
+  .desc p {
+    line-height: 1.75;
+    font-size: .7rem;
+  }
+}
+
+/* the last one for display less then 330px */
+@media only screen and (max-width: 330px){
+  .person {
+    margin: 15px auto;
+    grid-template-columns: 100%;
+  }
+  .desc {
+    padding: 10px;
+  }
+  .desc p {
+    line-height: 1.3rem;
+  }
+}
+
+/* <section className="person">
+            <article className="image">
+            <img
+                alt=""
+                src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg"
+            />
+            </article>
+            <article className="desc">
+            <div className="detail">
+                <h4>peter rabbitson</h4>
+                <p>36 years old</p>
+            </div>
+            <div className="btn">
+                <button>wished</button>
+            </div>
+            </article>
+        </section> */
